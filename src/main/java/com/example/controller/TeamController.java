@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/iteams")     // 通过这里配置使下面的映射都在/teams下，可去除
 public class TeamController {
 
+    private static final String RET_SUCCESS = "success";
     static Map<Long, Team> teams = Collections.synchronizedMap(new HashMap<Long, Team>());
 
 
@@ -25,7 +26,6 @@ public class TeamController {
     public String hello() {
         // 处理"/teams/"的GET请求，用来获取用户列表
         // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
-//        List<Team> r = new ArrayList<Team>(teams.values());
         return "hello world";
     }
 
@@ -33,8 +33,7 @@ public class TeamController {
     public List<Team> getTeamList() {
         // 处理"/teams/"的GET请求，用来获取用户列表
         // 还可以通过@RequestParam从页面中传递参数来进行查询条件或者翻页信息的传递
-        List<Team> r = new ArrayList<Team>(teams.values());
-        return r;
+        return new ArrayList<>(teams.values());
     }
 
     @RequestMapping(value={"/", ""}, method=RequestMethod.POST)
@@ -42,7 +41,7 @@ public class TeamController {
         // 处理"/teams/"的POST请求，用来创建Team
         // 除了@ModelAttribute绑定参数之外，还可以通过@RequestParam从页面中传递参数
         teams.put(user.getId(), user);
-        return "success";
+        return RET_SUCCESS;
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.GET)
@@ -59,14 +58,14 @@ public class TeamController {
         u.setName(user.getName());
         u.setAge(user.getAge());
         teams.put(id, u);
-        return "success";
+        return RET_SUCCESS;
     }
 
     @RequestMapping(value="/{id}", method=RequestMethod.DELETE)
     public String deleteTeam(@PathVariable Long id) {
         // 处理"/teams/{id}"的DELETE请求，用来删除Team
         teams.remove(id);
-        return "success";
+        return RET_SUCCESS;
     }
 
 }
