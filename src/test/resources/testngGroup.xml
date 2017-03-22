@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteGroup" verbose="1" >
+	<test name="TestGroup" verbose="3">
+		<groups>
+			<run>
+				<include name="groupIgnore" />
+				<exclude name="groupAno"></exclude>
+				<exclude name="groupException"></exclude>
+				<exclude name="groupParam"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.group.NgGroupTest" />
+		</classes>
+	</test> <!-- TestGroup -->
+
+	<test name="TestGroupAno" verbose="10">
+		<groups>
+			<run>
+				<include name="groupAno" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.group.NgGroupTest" />
+		</classes>
+	</test> <!-- TestGroupAno -->
+
+	<test name="TestGroupException" verbose="8">
+		<groups>
+			<run>
+				<include name="groupException" />
+				<exclude name="groupIgnore" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.group.NgGroupTest" />
+		</classes>
+	</test> <!-- TestGroupException -->
+
+	<test name="TestGroupAnoExceptionParam" verbose="6">
+		<groups>
+			<run>
+				<include name="groupAno" />
+				<include name="groupException" />
+				<include name="groupParam" />
+				<exclude name="groupIgnore" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.group.NgGroupTest" />
+		</classes>
+	</test> <!-- TestGroupAnoExceptionParam -->
+
+	<test name="TestGroupDB" verbose="3">
+		<classes>
+			<class name="com.example.testng.group.NgGroupDBTest" />
+			<class name="com.example.testng.group.NgGroupDBSeleniumTest" />
+		</classes>
+	</test> <!-- TestGroupDB -->
+
+	<test name="TestGroupDBSelenium" verbose="3">
+		<groups>
+			<run>
+				<include name="selenium-test" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.group.NgGroupDBTest" />
+			<class name="com.example.testng.group.NgGroupDBSeleniumTest" />
+		</classes>
+	</test> <!-- TestGroupDB -->
+</suite> <!-- SuiteGroup -->

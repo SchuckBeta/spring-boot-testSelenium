@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteAno" verbose="0">
+	<test name="TestAno" preserve-order="true" verbose="2">
+		<classes>
+			<class name="com.example.testng.ano.NgLiveTest">
+				<methods>
+					<exclude name="testNgIgnore" />
+					<include name="testNgXmlParamers" />
+					<include name="testNgDataProvider"></include>
+				</methods>
+			</class>
+			<class name="com.example.testng.ano.NgBaseTest" />
+			<class name="com.example.testng.ano.NgExceptionTest" />
+		</classes>
+	</test> <!-- TestAno -->
+</suite> <!-- SuiteAno -->

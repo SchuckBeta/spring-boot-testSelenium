@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteDepends" verbose="0">
+	<test name="TestDependsGroup" verbose="1">
+		<classes>
+			<class name="com.example.testng.depends.NgGroupDepTest" />
+			<class name="com.example.testng.depends.NgDependsGroupTest" />
+		</classes>
+	</test> <!-- TestDependsGroup -->
+
+	<test name="TestDependsMethod" verbose="10">
+		<classes>
+			<class name="com.example.testng.depends.NgDependsMethodTest" />
+		</classes>
+	</test> <!-- TestDependsMethod -->
+</suite> <!-- SuiteDepends -->

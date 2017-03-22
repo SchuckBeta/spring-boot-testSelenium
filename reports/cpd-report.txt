@@ -1,0 +1,434 @@
+Found a 15 line (114 tokens) duplication in the following files: 
+Starting at line 26 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+Starting at line 61 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+    List<Team> teams = new ArrayList<Team>();
+    for (int i = 0; i < 1; i++) {
+      Team team = new Team();
+      team.setName("Jason s" + i);
+      team.setAge(10 + i);
+      List<Player> players = new ArrayList<Player>();
+      for (int j = 0; j < 5; j++) {
+        Player player = new Player();
+        player.setName("Jason s" + j);
+        player.setAge(30 + j);
+        players.add(player);
+      }
+      team.setPlayers(players);
+      teams.add(team);
+    }
+=====================================================================
+Found a 18 line (100 tokens) duplication in the following files: 
+Starting at line 17 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 17 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+public class ResController {
+
+  List<Team> teams;
+
+  /**
+   * 初始化测试数�?.
+   */
+  @PostConstruct
+  public void init() {
+    this.teams = new ArrayList<Team>();
+    for (int i = 0; i < 1; i++) {
+      Team team = new Team();
+      team.setName("Jason s" + i);
+      team.setAge(10 + i);
+      List<Player> players = new ArrayList<Player>();
+      for (int j = 0; j < 5; j++) {
+        Player player = new Player();
+        player.setName("Jason s" + j);
+=====================================================================
+Found a 10 line (94 tokens) duplication in the following files: 
+Starting at line 67 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 161 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = get("/iteams.json");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("[]")));
+		request = get("/iteams.xml");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("<List/>")));
+=====================================================================
+Found a 9 line (84 tokens) duplication in the following files: 
+Starting at line 26 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 61 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+    List<Team> teams = new ArrayList<Team>();
+    for (int i = 0; i < 1; i++) {
+      Team team = new Team();
+      team.setName("Jason s" + i);
+      team.setAge(10 + i);
+      List<Player> players = new ArrayList<Player>();
+      for (int j = 0; j < 5; j++) {
+        Player player = new Player();
+        player.setName("Jason s" + j);
+=====================================================================
+Found a 14 line (74 tokens) duplication in the following files: 
+Starting at line 94 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 152 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = delete("/iteams/1.xml");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+
+		
+		/***********************************************************************/
+		// 7、get查一下user列表，应该为�?
+		/***********************************************************************/
+		request = get("/iteams.json");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("[]")));
+=====================================================================
+Found a 11 line (66 tokens) duplication in the following files: 
+Starting at line 8 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBOneTest.java
+Starting at line 8 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngc\NgcCOneTest.java
+
+public class NgcCOneTest {
+
+  @Test( dataProvider = "dp1", groups = { "regressiontest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp1" )
+  public Object[][] returnData() {
+    return new Object[][] {
+      new Object[] { 1, "a" },
+=====================================================================
+Found a 13 line (54 tokens) duplication in the following files: 
+Starting at line 83 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 91 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = post("/iteams.xml")
+			.param("id", "1")
+			.param("name", "测试大师")
+			.param("age", "20");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+
+		
+		/***********************************************************************/
+		// 3、get获取user列表，应该有刚才插入的数�?
+		/***********************************************************************/
+		request = get("/iteams.json");
+=====================================================================
+Found a 8 line (49 tokens) duplication in the following files: 
+Starting at line 11 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBTwoTest.java
+Starting at line 11 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngc\NgCTwoTest.java
+
+  public void f2(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp2" )
+  public Object[][] returnData() {
+    return new Object[][] {
+      new Object[] { 3, "c" },
+=====================================================================
+Found a 12 line (47 tokens) duplication in the following files: 
+Starting at line 118 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 124 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = put("/iteams/1.xml")
+				.param("name", "测试终极大师")
+				.param("age", "30");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+
+		
+		/***********************************************************************/
+		// 5、get�?个id�?1的user
+		/***********************************************************************/
+		request = get("/iteams/1.json");
+=====================================================================
+Found a 6 line (46 tokens) duplication in the following files: 
+Starting at line 71 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 107 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+			.andExpect(content().string(equalTo("[{\"id\":1,\"name\":\"测试大师\",\"age\":20,\"players\":null}]")));
+		request = get("/iteams.xml");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("<List><item><id>1</id><name>测试大师</name><age>20</age></item></List>")));
+=====================================================================
+Found a 15 line (46 tokens) duplication in the following files: 
+Starting at line 9 of E:\workspace-sts\spring-group\src\main\java\com\example\entity\Player.java
+Starting at line 22 of E:\workspace-sts\spring-group\src\main\java\com\example\entity\Team.java
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Integer getAge() {
+    return age;
+  }
+
+  public void setAge(Integer age) {
+    this.age = age;
+  }
+=====================================================================
+Found a 5 line (43 tokens) duplication in the following files: 
+Starting at line 67 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 103 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = get("/iteams.json");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("[{\"id\":1,\"name\":\"测试大师\",\"age\":20,\"players\":null}]")));
+=====================================================================
+Found a 6 line (43 tokens) duplication in the following files: 
+Starting at line 44 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+Starting at line 89 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+
+  public Team team() {
+    Team team1 = new Team();
+    team1.setName("Jason s");
+    team1.setAge(AGE_10);
+    List<Player> players = new ArrayList<Player>();
+    for (int j = 0; j < 1; j++) {
+=====================================================================
+Found a 21 line (42 tokens) duplication in the following files: 
+Starting at line 45 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+Starting at line 68 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+
+    return "index";
+  }
+
+  /**
+   * 获取json字符�?.
+   *
+   * @return 返回字符串列�?
+   */
+  @RequestMapping("/ajaxJson")
+  public List<String> ajaxJson() {
+    List<String> jsons = new ArrayList<String>();
+    jsons.add("sss");
+    return jsons;
+  }
+
+  /**
+   * 支持/team.xml �?/team.json请求.
+   *
+   * @return 返回对象列表
+   */
+  @RequestMapping("/team")
+=====================================================================
+Found a 9 line (42 tokens) duplication in the following files: 
+Starting at line 49 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 52 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+  @RequestMapping("/ajaxJson")
+  public List<String> ajaxJson() {
+    List<String> jsons = new ArrayList<String>();
+    jsons.add("sss");
+    return jsons;
+  }
+
+  @RequestMapping("/teams")
+  public List<Team> teams() {
+=====================================================================
+Found a 7 line (40 tokens) duplication in the following files: 
+Starting at line 49 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+Starting at line 94 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+
+    for (int j = 0; j < 1; j++) {
+      Player player = new Player();
+      player.setName("Jason s" + j);
+      player.setAge(AGE_30 + j);
+      players.add(player);
+    }
+    team1.setPlayers(players);
+=====================================================================
+Found a 8 line (39 tokens) duplication in the following files: 
+Starting at line 8 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\nga\NgATwoTest.java
+Starting at line 8 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBTwoTest.java
+
+public class NgBTwoTest {
+
+  @Test( dataProvider = "dp2", groups = { "devtest", "smoketest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp2" )
+=====================================================================
+Found a 13 line (39 tokens) duplication in the following files: 
+Starting at line 49 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 76 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\XmlController.java
+
+  @RequestMapping("/ajaxJson")
+  public List<String> ajaxJson() {
+    List<String> jsons = new ArrayList<String>();
+    jsons.add("sss");
+    return jsons;
+  }
+
+  /**
+   * 支持/team.xml �?/team.json请求.
+   *
+   * @return 返回对象列表
+   */
+  @RequestMapping("/team")
+=====================================================================
+Found a 16 line (38 tokens) duplication in the following files: 
+Starting at line 13 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\nga\NgAOneTest.java
+Starting at line 10 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\nga\NgATwoTest.java
+
+  @Test( dataProvider = "dp2", groups = { "devtest", "smoketest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+//  @DataProvider( name = "dp2" )
+//  public Object[][] returnData() {
+//    return new Object[][] {
+//      new Object[] { 7, "g" },
+//      new Object[] { 8, "h" },
+//    };
+//  }
+
+  @BeforeTest
+  public void beforeTest() {
+    System.out.println("Before dev test 2");
+=====================================================================
+Found a 5 line (38 tokens) duplication in the following files: 
+Starting at line 67 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 73 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = get("/iteams.xml");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("<List/>")));
+=====================================================================
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 94 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 126 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+				.param("age", "30");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+
+		
+		/***********************************************************************/
+		// 5、get�?个id�?1的user
+		/***********************************************************************/
+		request = get("/iteams/1.json");
+=====================================================================
+Found a 5 line (33 tokens) duplication in the following files: 
+Starting at line 86 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 120 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 148 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = delete("/iteams/1.json");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+		request = delete("/iteams/1.xml");
+=====================================================================
+Found a 10 line (33 tokens) duplication in the following files: 
+Starting at line 34 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 34 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+        player.setName("Jason s" + j);
+        player.setAge(30 + j);
+        players.add(player);
+      }
+      team.setPlayers(players);
+      teams.add(team);
+    }
+  }
+
+  @RequestMapping("/")
+=====================================================================
+Found a 4 line (32 tokens) duplication in the following files: 
+Starting at line 53 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 68 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(status().isOk())
+			.andExpect(content().string(equalTo("[]")));
+=====================================================================
+Found a 6 line (30 tokens) duplication in the following files: 
+Starting at line 12 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\nga\NgAOneTest.java
+Starting at line 9 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBOneTest.java
+
+  @Test( dataProvider = "dp1", groups = { "regressiontest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp1" )
+=====================================================================
+Found a 6 line (29 tokens) duplication in the following files: 
+Starting at line 9 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBOneTest.java
+Starting at line 10 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBTwoTest.java
+
+  @Test( dataProvider = "dp2", groups = { "devtest", "smoketest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp2" )
+=====================================================================
+Found a 4 line (29 tokens) duplication in the following files: 
+Starting at line 135 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 148 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = delete("/iteams/1.json");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("success")));
+=====================================================================
+Found a 7 line (29 tokens) duplication in the following files: 
+Starting at line 34 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\IndexController.java
+Starting at line 69 of E:\workspace-sts\spring-group\src\main\java\com\example\controller\ResController.java
+
+        player.setName("Jason s" + j);
+        player.setAge(30 + j);
+        players.add(player);
+      }
+      team.setPlayers(players);
+      teams.add(team);
+    }
+=====================================================================
+Found a 4 line (27 tokens) duplication in the following files: 
+Starting at line 86 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 135 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+Starting at line 139 of E:\workspace-sts\spring-group\src\test\java\com\example\TeamTests.java
+
+		request = get("/iteams/1.xml");
+		mvc.perform(request)
+			.andDo(MockMvcResultHandlers.print())
+			.andExpect(content().string(equalTo("<Team><id>1</id><name>测试终极大师</name><age>30</age></Team>")));
+=====================================================================
+Found a 6 line (25 tokens) duplication in the following files: 
+Starting at line 13 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\nga\NgAOneTest.java
+Starting at line 10 of E:\workspace-sts\spring-group\src\test\java\com\example\testng\ngb\NgBTwoTest.java
+
+  @Test( dataProvider = "dp2", groups = { "devtest", "smoketest" } )
+  public void f1(Integer n, String s) {
+    System.out.println( n + s );
+  }
+
+  @DataProvider( name = "dp2" )

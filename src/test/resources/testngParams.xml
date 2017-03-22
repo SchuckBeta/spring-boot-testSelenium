@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteParams">
+	<parameter name="name" value="Zhangsan" />
+	<parameter name="age" value="19" />
+	<parameter name="sex" value="男" />
+	<test name="TestParams" verbose="2">
+		<parameter name="name" value="Zhangsan1" />
+		<groups>
+			<run>
+				<exclude name="xml"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.params.NgParamsTest" >
+				<methods>
+					<include name="testNgXmlParamers"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- TestParams -->
+
+	<test name="TestParamsOverride" verbose="7">
+		<parameter name="name" value="LiSi" />
+		<groups>
+			<run>
+				<include name="xml" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.example.testng.params.NgParamsTest" >
+				<parameter name="name" value="LiSi2"></parameter>
+				<methods>
+					<parameter name="name" value="LiSi3"></parameter>
+					<include name="testNgXmlParamersOverride"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- TestParamsOverride -->
+
+
+	<test name="TestParamsCvsFile" verbose="7">
+		<classes>
+			<class name="com.example.testng.params.NgCvsUtilsTest" />
+		</classes>
+	</test> <!-- TestParamsOverride -->
+</suite> <!-- SuiteParams -->

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SuiteParams" duration-ms="119" started-at="2017-03-21T11:58:42Z" finished-at="2017-03-21T11:58:42Z">
+    <groups>
+      <group name="xml">
+        <method signature="NgParamsTest.testNgXmlParamers(java.lang.String, java.lang.Integer, java.lang.String)[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="testNgXmlParamers" class="com.example.testng.params.NgParamsTest"/>
+        <method signature="NgParamsTest.testNgXmlParamersOverride(java.lang.String, java.lang.Integer, java.lang.String)[pri:0, instance:com.example.testng.params.NgParamsTest@1d8d30f7]" name="testNgXmlParamersOverride" class="com.example.testng.params.NgParamsTest"/>
+      </group> <!-- xml -->
+    </groups>
+    <test name="TestParams" duration-ms="31" started-at="2017-03-21T11:58:42Z" finished-at="2017-03-21T11:58:42Z">
+      <class name="com.example.testng.params.NgParamsTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="beforeTest" is-config="true" duration-ms="7" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="beforeClass" is-config="true" duration-ms="1" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="testNgXmlParamers(java.lang.String, java.lang.Integer, java.lang.String)[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="testNgXmlParamers" duration-ms="7" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Zhangsan1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[男]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgXmlParamers -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="afterClass" is-config="true" duration-ms="1" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.example.testng.params.NgParamsTest@1563da5]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.example.testng.params.NgParamsTest -->
+    </test> <!-- TestParams -->
+    <test name="TestParamsOverride" duration-ms="2" started-at="2017-03-21T11:58:42Z" finished-at="2017-03-21T11:58:42Z">
+      <class name="com.example.testng.params.NgParamsTest">
+        <test-method status="PASS" signature="testNgXmlParamersOverride(java.lang.String, java.lang.Integer, java.lang.String)[pri:0, instance:com.example.testng.params.NgParamsTest@1d8d30f7]" name="testNgXmlParamersOverride" duration-ms="1" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LiSi3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[男]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgXmlParamersOverride -->
+      </class> <!-- com.example.testng.params.NgParamsTest -->
+    </test> <!-- TestParamsOverride -->
+    <test name="TestParamsCvsFile" duration-ms="13" started-at="2017-03-21T11:58:42Z" finished-at="2017-03-21T11:58:42Z">
+      <class name="com.example.testng.params.NgCvsUtilsTest">
+        <test-method status="PASS" signature="testNgCvsReadAll()[pri:0, instance:com.example.testng.params.NgCvsUtilsTest@6b9651f3]" name="testNgCvsReadAll" duration-ms="5" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgCvsReadAll -->
+        <test-method status="PASS" signature="testNgCvsWriteNext()[pri:0, instance:com.example.testng.params.NgCvsUtilsTest@6b9651f3]" name="testNgCvsWriteNext" duration-ms="4" started-at="2017-03-21T19:58:42Z" finished-at="2017-03-21T19:58:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgCvsWriteNext -->
+      </class> <!-- com.example.testng.params.NgCvsUtilsTest -->
+    </test> <!-- TestParamsCvsFile -->
+  </suite> <!-- SuiteParams -->
+</testng-results>

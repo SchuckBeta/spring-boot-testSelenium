@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<FindBugsFilter>
+	<Match>
+		<Method name="main" />
+	</Match>
+	<Match>
+		<Class name="~.*\.*Test" />
+	</Match>
+	<Match>
+		<Class name="~.*\.*Value" />
+	</Match>
+	<Match>
+		<Class name="~.*\.*Value\$.*" />
+	</Match>
+	<Match>
+		<Class name="~.*\.*Table" />
+	</Match>
+</FindBugsFilter>
