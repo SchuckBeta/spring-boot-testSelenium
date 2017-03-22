@@ -256,6 +256,23 @@
 		            </configuration>
 			    </plugin>
 			    <!-- pmd end-->
+
+			    <!-- sonar start-->
+			    <plugin>
+		            <groupId>org.codehaus.sonar</groupId>
+		            <artifactId>sonar-maven-plugin</artifactId>
+		            <version>3.5.1</version>
+		            <executions>
+		                <execution>
+		                    <id>sonar</id>
+		                    <phase>site</phase>
+		                    <goals>
+		                    <goal>sonar</goal>
+		                    </goals>
+		                </execution>
+		            </executions>
+		    	</plugin>
+			    <!-- sonar end-->
             </plugins>
 		</pluginManagement>
 
@@ -302,6 +319,14 @@
 		        <artifactId>maven-pmd-plugin</artifactId>
 	        </plugin>
 	        <!-- pmd end-->
+
+
+	        <!-- sonar start-->
+		    <plugin>
+	            <groupId>org.codehaus.sonar</groupId>
+	            <artifactId>sonar-maven-plugin</artifactId>
+	    	</plugin>
+		    <!-- sonar end-->
 		</plugins>
 	</build>
 
