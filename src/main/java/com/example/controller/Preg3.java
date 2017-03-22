@@ -32,6 +32,7 @@ public class Preg3 {
     System.out.println(list.get(0));
 //    String[] array = new String[] {};
 //    System.out.println(array[3]);
+
   }
 
   /**

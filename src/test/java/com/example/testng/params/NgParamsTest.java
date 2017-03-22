@@ -8,8 +8,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.example.logs.Log;
-
 public class NgParamsTest {
   private static Logger logger = Logger.getLogger(NgParamsTest.class);
 
